@@ -1,0 +1,42 @@
+:root{
+    --colorPrincipal: #349a6d;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header{
+    background-color: var(--colorPrincipal);
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
+
+#menuBuscador{
+    width: 35%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+#buscador{
+    width: 100%;
+}
+
+#userMenu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+#userButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
