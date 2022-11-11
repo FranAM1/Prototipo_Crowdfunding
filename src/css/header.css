@@ -4,11 +4,6 @@
     --colorSecundarios: #a32b17;
 }
 
-body{
-    box-sizing: border-box;
-    margin: 0;
-}
-
 header{
     background-color: var(--colorPrincipal);
     padding: 0.5rem;

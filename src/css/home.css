@@ -1,0 +1,44 @@
+:root{
+    --colorPrincipal: #349a6d;
+    --principalVariante: #70ffc1;
+    --colorSecundarios: #a32b17;
+    --secundarioVariante: #f06951;
+}
+
+
+#seccionInfo{
+    background-color: var(--secundarioVariante);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    border-bottom: 2px solid black;
+}
+
+#seccionInfo > img{
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+#infoText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 1rem;
+}
+
+#infoText > h2{
+    font-size: 2.5rem;
+}
+
+#infoText > p{
+    font-size: 1.2rem;
+}
+
+#infoText > button{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 200px;
+}
