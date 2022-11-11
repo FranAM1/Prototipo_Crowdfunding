@@ -1,5 +1,7 @@
 :root{
     --colorPrincipal: #349a6d;
+    --principalVariante: #70ffc1;
+    --colorSecundarios: #a32b17;
 }
 
 body{
@@ -7,21 +9,27 @@ body{
     margin: 0;
 }
 
-#header{
+header{
     background-color: var(--colorPrincipal);
-    height: 100px;
+    padding: 0.5rem;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem 0 2rem;
+}
+
+#logoHeader{
+    justify-self: center;
+    width: 200px;
 }
 
 #menuBuscador{
-    width: 35%;
-    
     display: flex;
     justify-content: center;
+    height: 40px;
+    width: 70%;
+    justify-self: center;
+    cursor: pointer;
 }
 
 #buscador{
@@ -31,7 +39,9 @@ body{
 #userMenu{
     display: flex;
     align-items: center;
+
     gap: 2rem;
+    justify-self: center;
 }
 
 
@@ -39,4 +49,38 @@ body{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+nav{
+    background-color: var(--principalVariante);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0 0.5rem 0;
+    
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.navCategorias{
+    list-style-type: none;
+    
+}
+
+.navCategorias > a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.navCategorias::after{  
+  content: '|';
+  padding: 0 1rem;
+  font-size: 1.3rem;
+}
+
+.navCategorias:last-child:after {
+    content: '';
+}
+
+.navCategorias > a:hover{
+    color: var(--colorSecundarios);
 }
