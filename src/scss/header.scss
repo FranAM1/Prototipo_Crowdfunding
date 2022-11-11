@@ -1,11 +1,5 @@
-:root{
-    --colorPrincipal: #349a6d;
-    --principalVariante: #70ffc1;
-    --colorSecundarios: #a32b17;
-}
 
 header{
-    background-color: var(--colorPrincipal);
     padding: 0.5rem;
 
     display: grid;
@@ -47,7 +41,6 @@ header{
 }
 
 nav{
-    background-color: var(--principalVariante);
     display: flex;
     justify-content: center;
     padding: 0.5rem 0 0.5rem 0;

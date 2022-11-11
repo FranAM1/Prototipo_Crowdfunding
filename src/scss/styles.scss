@@ -1,17 +1,27 @@
+@import './header.scss';
+
 :root{
     --colorPrincipal: #349a6d;
-    --principalVariante: #70ffc1;
+    --principalVariante: #f6f1eb;
     --colorSecundarios: #a32b17;
-    --secundarioVariante: #f06951;
 }
 
 
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
 #seccionInfo{
-    background-color: var(--secundarioVariante);
+    background-color: var(--principalVariante);
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
-    border-bottom: 2px solid black;
+    margin: 1rem;
 }
 
 #seccionInfo > img{
