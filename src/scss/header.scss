@@ -1,7 +1,7 @@
 
 header{
     padding: 0.5rem;
-    background-color: var(--principalVariante);
+    background-color: $colorPrincipal;
 
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -14,16 +14,45 @@ header{
 }
 
 #menuBuscador{
+    $radioBorder: 20px;
+    $paddingItems: 1rem;
+
     display: flex;
     justify-content: center;
     height: 40px;
     width: 70%;
     justify-self: center;
     cursor: pointer;
-}
+    border: 1px solid black;
+    border-radius: $radioBorder;
 
-#buscador{
-    width: 100%;
+    &>input{    
+        width: 100%;
+        border: none;
+        padding-left: $paddingItems;
+        border-radius: $radioBorder 0 0 $radioBorder; 
+        color: black;   
+
+        &:focus{
+            outline: none;
+            border: 2px solid black;
+            border-right: none;
+
+            & + button{
+                border: 2px solid black;
+                border-left: none;
+            }
+        }
+
+    }
+
+    &>button{
+        border: none;
+        cursor: pointer;
+        background-color: white;
+        padding-right: $paddingItems;
+        border-radius: 0 $radioBorder $radioBorder 0;
+    }
 }
 
 #userMenu{
@@ -39,6 +68,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 200px;
 }
 
 nav{
@@ -48,29 +78,29 @@ nav{
     
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    background-color: #faf8f5;
+    background-color: $principalVariante;
 }
 
 .navCategorias{
     list-style-type: none;
-    
-}
 
-.navCategorias > a{
-    text-decoration: none;
-    font-size: 1.3rem;
-}
+    &>a{    
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
 
-.navCategorias::after{  
-  content: '|';
-  padding: 0 1rem;
-  font-size: 1.3rem;
-}
+    &::after{
+        content: '|';
+        padding: 0 1rem;
+        font-size: 1.3rem;
 
-.navCategorias:last-child:after {
-    content: '';
-}
+    }
 
-.navCategorias > a:hover{
-    color: var(--colorSecundarios);
+    &:last-child::after{
+        content: '';
+    }
+
+    &>a:hover{     
+        color: $secundarioVariante;
+    } 
 }

@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  height: 100vh;
+}
+
 header {
   padding: 0.5rem;
-  background-color: var(--principalVariante);
+  background-color: #f6f1eb;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
@@ -18,10 +29,31 @@ header {
   width: 70%;
   justify-self: center;
   cursor: pointer;
+  border: 1px solid black;
+  border-radius: 20px;
 }
-
-#buscador {
+#menuBuscador > input {
   width: 100%;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 20px 0 0 20px;
+  color: black;
+}
+#menuBuscador > input:focus {
+  outline: none;
+  border: 2px solid black;
+  border-right: none;
+}
+#menuBuscador > input:focus + button {
+  border: 2px solid black;
+  border-left: none;
+}
+#menuBuscador > button {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  padding-right: 1rem;
+  border-radius: 0 20px 20px 0;
 }
 
 #userMenu {
@@ -35,6 +67,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 200px;
 }
 
 nav {
@@ -49,48 +82,28 @@ nav {
 .navCategorias {
   list-style-type: none;
 }
-
 .navCategorias > a {
   text-decoration: none;
   font-size: 1.3rem;
 }
-
 .navCategorias::after {
   content: "|";
   padding: 0 1rem;
   font-size: 1.3rem;
 }
-
-.navCategorias:last-child:after {
+.navCategorias:last-child::after {
   content: "";
 }
-
 .navCategorias > a:hover {
-  color: var(--colorSecundarios);
-}
-
-:root {
-  --colorPrincipal: #349a6d;
-  --principalVariante: #f6f1eb;
-  --colorSecundarios: #a32b17;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
+  color: #f01446;
 }
 
 #seccionInfo {
-  background-color: var(--principalVariante);
+  background-color: #f6f1eb;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 2rem;
 }
-
 #seccionInfo > img {
   width: 50%;
   justify-self: center;
@@ -100,24 +113,43 @@ body {
 #infoText {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  align-items: flex-start;
+  justify-self: flex-end;
   text-align: justify;
   gap: 1rem;
+  margin-left: 10rem;
 }
-
+#infoText > h2 {
+  font-size: 2rem;
+}
+#infoText > p {
+  font-size: 1.2rem;
+}
 #infoText > h2 {
   font-size: 2.5rem;
 }
 
-#infoText > p {
-  font-size: 1.2rem;
+#botonesInfo {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-#infoText > button {
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  width: 200px;
+.estiloBoton {
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #f01446;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.estiloBoton:hover {
+  background-color: #c40d36;
 }
 
 /*# sourceMappingURL=styles.css.map */
