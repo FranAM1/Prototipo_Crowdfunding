@@ -4,7 +4,7 @@ $colorSecundario: #f01446;
 $secundarioVariante: #18a5d6;
 $letrasNegro: #232221;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
 
 
 
@@ -33,9 +33,6 @@ h3{
     font-size: 24px;
 }
 
-p{
-    font-size: 12px;
-}
 
 @import './header.scss';
 
