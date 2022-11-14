@@ -4,10 +4,7 @@ $colorSecundario: #f01446;
 $secundarioVariante: #18a5d6;
 $letrasNegro: #232221;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0;
@@ -30,7 +27,11 @@ h2{
 }
 
 h3{
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.lowWeight{
+    font-weight: 600;
 }
 
 
