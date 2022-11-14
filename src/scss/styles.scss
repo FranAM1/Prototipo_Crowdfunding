@@ -1,7 +1,8 @@
 $colorPrincipal: #f6f1eb;
 $principalVariante: #faf8f5;
-$colorSecundario: #18a5d6;
-$secundarioVariante: #f01446;
+$colorSecundario: #f01446;
+$secundarioVariante: #18a5d6;
+$letrasNegro: #232221;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
@@ -12,6 +13,7 @@ $secundarioVariante: #f01446;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
+    color: $letrasNegro;
 }
 
 
@@ -19,7 +21,24 @@ body{
     height: 100vh;
 }
 
+h1{
+    font-size: 70px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
 
 @import './header.scss';
 
 @import './home.scss';
+
+@import './card.scss';

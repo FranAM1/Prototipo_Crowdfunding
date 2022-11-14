@@ -15,7 +15,7 @@ header{
 
 #menuBuscador{
     $radioBorder: 20px;
-    $paddingItems: 1rem;
+    $paddingItems: 0.8rem;
 
     display: flex;
     justify-content: center;
@@ -23,35 +23,31 @@ header{
     width: 70%;
     justify-self: center;
     cursor: pointer;
-    border: 1px solid black;
     border-radius: $radioBorder;
 
     &>input{    
         width: 100%;
-        border: none;
         padding-left: $paddingItems;
         border-radius: $radioBorder 0 0 $radioBorder; 
         color: black;   
+        background-color: $colorPrincipal;
+        border: 1px solid black;
 
         &:focus{
             outline: none;
-            border: 2px solid black;
             border-right: none;
-
-            & + button{
-                border: 2px solid black;
-                border-left: none;
-            }
+            border: 1px solid $colorSecundario;
         }
 
     }
 
     &>button{
-        border: none;
         cursor: pointer;
-        background-color: white;
+        background-color: $principalVariante;
         padding-right: $paddingItems;
         border-radius: 0 $radioBorder $radioBorder 0;
+        border: 1px solid black;
+        border-left: 0;
     }
 }
 
@@ -71,6 +67,8 @@ header{
     width: 200px;
 }
 
+
+
 nav{
     display: flex;
     justify-content: center;
@@ -87,6 +85,7 @@ nav{
     &>a{    
         text-decoration: none;
         font-size: 1.3rem;
+        color: $secundarioVariante;
     }
 
     &::after{
@@ -101,6 +100,6 @@ nav{
     }
 
     &>a:hover{     
-        color: $secundarioVariante;
+        color: $colorSecundario;
     } 
 }
