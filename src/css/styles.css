@@ -53,7 +53,7 @@ header {
 
 #logoHeader {
   justify-self: center;
-  width: 200px;
+  width: 300px;
 }
 
 #menuBuscador {
@@ -188,6 +188,7 @@ nav {
 #seccionDestacados {
   text-align: center;
   padding: 3rem;
+  background-color: #faf8f5;
 }
 
 #destacadosCards {
