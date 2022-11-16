@@ -1,3 +1,10 @@
+%flexInfoExtra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem
+}
+
 #destacadosCards{
     display: flex;
     flex-wrap: wrap;
@@ -12,13 +19,21 @@
     border-radius: 5px;   
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
-    &>img{
+    >img{
         width: 100%;
+        overflow: hidden;
     }
 
-    &>.datosCard{     
+    >.datosCard{     
         background-color: $colorPrincipal;
         padding: 1rem;
+    }
+
+    transition:linear 0.3s;
+
+    &:hover{
+        margin-bottom: 1rem;
+        box-shadow: 0 16px 24px 0 rgba(0,0,0,0.2);
     }
 }
 
@@ -35,3 +50,70 @@
         padding: 0.5rem;
     }
 }
+
+.infoExtraCard{
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem; 
+
+    span, div{
+        font-size: 20px;
+        font-weight: bold
+    }
+
+    .moneyInfo{
+        @extend %flexInfoExtra;
+        justify-self: start;
+    }
+
+    .barraDeProgesion{
+        grid-row: 2/3;
+        grid-column: 1/4;
+        border: 1px solid black;
+        background-color: $principalVariante;
+
+        display: flex;
+        align-items: center;
+
+        >div{
+            background-color: $secundarioVariante;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 10%;
+            max-width: 100%;
+        }
+    }
+
+    .favoritosInfo{
+        @extend %flexInfoExtra;
+        align-items: center;
+        grid-column: 3/4;
+        justify-self: end;
+
+        >i{
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover{
+                color: $colorSecundario;
+            }
+        }
+    }
+
+    .timeInfo{
+        @extend %flexInfoExtra;
+        grid-row: 3/4;
+        grid-column: 1/4;
+        justify-self: start;
+    }
+
+}
+
+
+
+
