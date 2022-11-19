@@ -93,12 +93,29 @@ header {
   gap: 2rem;
   justify-self: center;
 }
+#userMenu > i {
+  color: #232221;
+}
 
 #userButtons {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  width: 200px;
+  justify-content: space-around;
+  width: 15rem;
+  height: 80px;
+}
+
+.botonesHeader {
+  background-color: #f01446;
+  border: 0;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.botonesHeader:hover {
+  background-color: #c40d36;
 }
 
 nav {
@@ -117,6 +134,7 @@ nav {
   text-decoration: none;
   font-size: 1.3rem;
   color: #18a5d6;
+  transition: color 0.3s;
 }
 .navCategorias::after {
   content: "|";
@@ -195,6 +213,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .infoExtraCard .timeInfo, .infoExtraCard .favoritosInfo, .infoExtraCard .moneyInfo {
@@ -315,7 +334,7 @@ footer a {
   transition: color 0.3s;
 }
 footer a:hover {
-  color: #18a5d6;
+  color: #f01446;
 }
 footer h4 {
   font-size: 18px;
@@ -346,6 +365,13 @@ footer h4 {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+.footerRedesSociales > i {
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.footerRedesSociales > i:hover {
+  color: #f01446;
 }
 
 /*# sourceMappingURL=styles.css.map */

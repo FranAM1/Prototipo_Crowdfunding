@@ -12,7 +12,7 @@ footer{
         transition: color 0.3s;
 
         &:hover{
-            color: $secundarioVariante;
+            color: $colorSecundario;
         }
     }
 
@@ -46,4 +46,13 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    >i{
+        transition: color 0.3s;
+        cursor: pointer;
+
+        &:hover{         
+            color: $colorSecundario;
+        }
+    }
 }

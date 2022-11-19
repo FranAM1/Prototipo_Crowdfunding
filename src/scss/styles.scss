@@ -2,7 +2,7 @@ $colorPrincipal: #f6f1eb;
 $principalVariante: #faf8f5;
 $colorSecundario: #f01446;
 $secundarioVariante: #18a5d6;
-$letrasNegro: #232221;
+$negro: #232221;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -10,7 +10,7 @@ $letrasNegro: #232221;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
-    color: $letrasNegro;
+    color: $negro;
 }
 
 
