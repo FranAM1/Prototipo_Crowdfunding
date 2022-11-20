@@ -5,7 +5,7 @@ let arrayCards =[
         dineroActual: 18120,
         dineroNecesitado: 49296,
         tiempoRestante: "5 dias",
-        imagen: "https://ksr-ugc.imgix.net/assets/038/940/213/e01fd61b10e41dd5bc706e8e01032e95_original.jpg?ixlib=rb-4.0.2&w=680&fit=max&v=1666040804&gif-q=50&q=92&s=a0909ef2de1beb12844b689f7203e01f"
+        imagen: "https://cdn.discordapp.com/attachments/1043959075194544169/1043959251791527946/e01fd61b10e41dd5bc706e8e01032e95_original.jpg"
     },
     {
         titulo: "Queen of Hell: Initium",
@@ -13,7 +13,7 @@ let arrayCards =[
         dineroActual: 30532,
         dineroNecesitado: 38663,
         tiempoRestante: "1 semana",
-        imagen: "https://ksr-ugc.imgix.net/assets/039/056/529/fb40eb752932b5497eb9f0a6a92ab6fb_original.jpg?ixlib=rb-4.0.2&w=680&fit=max&v=1666934101&gif-q=50&q=92&s=0077f06313a9f478b951009b29be237b"
+        imagen: "https://cdn.discordapp.com/attachments/1043959075194544169/1043959640964223026/fb40eb752932b5497eb9f0a6a92ab6fb_original.jpg"
     },
     {
         titulo: "Slay the Spire: The Board Game",
@@ -21,7 +21,7 @@ let arrayCards =[
         dineroActual: 3224150,
         dineroNecesitado: 48329,
         tiempoRestante: "48 horas",
-        imagen: "https://ksr-ugc.imgix.net/assets/039/238/787/fb76c269f613452c0faf044d878b4507_original.png?ixlib=rb-4.0.2&crop=faces&w=1024&h=576&fit=crop&v=1668552710&auto=format&frame=1&q=92&s=1aeaec4871bdf242d7cbbcc02d047ef5"
+        imagen: "https://cdn.discordapp.com/attachments/1043959075194544169/1043959952269639861/Captura.PNG"
     },
     {
         titulo: "The Call of Karakoram",
@@ -29,7 +29,7 @@ let arrayCards =[
         dineroActual: 20502,
         dineroNecesitado: 35200,
         tiempoRestante: "2 semanas",
-        imagen: "https://img.ulule.com/display/0c01859a914b966352441edcfd054f2375e9c61a/thumbnail/640x360/presales/3/6/4/2/5/1/152463/james-leaving-the-karakoram-highway-with-30kg-of-kit-1.CxSin8nasg.jpg"
+        imagen: "https://cdn.discordapp.com/attachments/1043959075194544169/1043960266242662410/james-leaving-the-karakoram-highway-with-30kg-of-kit-1.CxSin8nasg.jpg"
     },
 ]
 
