@@ -3,18 +3,17 @@
 #seccionInfo{
     background-color: $colorPrincipal;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 2rem;
 
     &>img{
-        width: 80%;
+        width: 400px;
         justify-self: center;
         align-self: center;
     }
 }
 
 #infoText{
-    grid-column: 1/3;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -70,6 +69,56 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 2rem;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+    #infoText{
+        margin-left: 1rem;
+        
+        >h1{
+            font-size: 50px;
+        }
+
+        >h3{
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    #seccionInfo{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        
+        >img{
+            grid-row: 2/3;
+        }
+    }
+}
+
+@media only screen and (max-width: 440px){
+    #infoText{
+        width: 100%;
+        margin-left: 0;
+        
+        >h1{
+            font-size: 40px;
+        }
+    }
+
+    #seccionInfo{
+        >img{
+            width: 100%;
+        }
+    }
+
+    .estiloBoton{
+        padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
 
     
