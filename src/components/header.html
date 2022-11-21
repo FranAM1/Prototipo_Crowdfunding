@@ -3,12 +3,12 @@
     <img id="logoHeader" src="./images/logo.png" alt="logo de la pagina">
     <form id="menuBuscador">
         <input type="text" placeholder="Buscar...">
-        <button type="submit">
+        <button id="inputBuscador" type="button" onclick="mostrarBuscador()">
             <i class="fa fa-search fa-2x"></i>
         </button>
     </form>
     <div id="userMenu">
-        <i  id="iconoUsuario" class="fa fa-user fa-5x"></i>
+        <i id="iconoUsuario" class="fa fa-user fa-5x"></i>
         <div id="userButtons">
             <button class="botonesHeader lowWeight">Login</button>
             <button class="botonesHeader lowWeight">Registro</button>
@@ -24,3 +24,4 @@
     <li class="navCategorias"><a href="#">Cine</a></li>
     <li class="navCategorias"><a href="#">Juegos</a></li>
 </nav>
+<div id="navFondo" class="ocultarNav"></div>

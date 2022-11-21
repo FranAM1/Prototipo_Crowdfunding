@@ -135,7 +135,6 @@ nav{
 
 .ocultarNav{
     display: none;
-    transition: 0.5s;
 }
 
 
@@ -144,12 +143,13 @@ nav{
 @media only screen and (max-width: 875px) {
     header{
         background-color: $principalVariante;
-        grid-template-columns:  1fr 1fr 4fr 1fr;
+        grid-template-columns:  30px 1fr 4fr 1fr;
         border-bottom: 2px solid $negro;
     }
 
     #iconoNav{
         display: block;
+        cursor: pointer;
     }
 
     #logoHeader{
@@ -164,6 +164,7 @@ nav{
     #menuBuscador{
         width: 100%;
         justify-content: flex-end;
+        cursor: auto;
 
         >input{
             display: none;
@@ -185,6 +186,7 @@ nav{
 
         >i{
             cursor: pointer;
+            font-size: 26.6667px;
         }
     }
 
@@ -230,5 +232,15 @@ nav{
         >a:hover{
             text-decoration: underline;
         }
+    }
+
+    .overlayNav{
+        display: inline;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background-color: $negro;
+        opacity: 0.2;
     }
 }

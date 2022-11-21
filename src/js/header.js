@@ -6,26 +6,12 @@ fetch("./components/header.html")
     header.innerHTML += data;
   });
 
-window.onload = () =>{
-    if (window.innerWidth < 876) {
-        document.getElementById("iconoUsuario").className = "fas fa-user fa-2x";
-    }else{
-        document.getElementById("iconoUsuario").className = "fas fa-user fa-5x";
-    }
-}
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth < 876) {
-        document.getElementById("iconoUsuario").className = "fas fa-user fa-2x";
-    }else{
-        document.getElementById("iconoUsuario").className = "fas fa-user fa-5x";
-    }
-})
-
 function abrirNav(){
     document.getElementsByTagName("nav")[0].className = "mostrarNav";
+    document.getElementById("navFondo").className = "overlayNav"
 }
 
 function cerrarNav(){
     document.getElementsByTagName("nav")[0].className = "ocultarNav";
+    document.getElementById("navFondo").className = "ocultarNav"
 }

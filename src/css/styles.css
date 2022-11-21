@@ -160,18 +160,18 @@ nav {
 
 .ocultarNav {
   display: none;
-  transition: 0.5s;
 }
 
 /*------------------MEDIA QUERIES------------------*/
 @media only screen and (max-width: 875px) {
   header {
     background-color: #faf8f5;
-    grid-template-columns: 1fr 1fr 4fr 1fr;
+    grid-template-columns: 30px 1fr 4fr 1fr;
     border-bottom: 2px solid #232221;
   }
   #iconoNav {
     display: block;
+    cursor: pointer;
   }
   #logoHeader {
     width: 200px;
@@ -183,6 +183,7 @@ nav {
   #menuBuscador {
     width: 100%;
     justify-content: flex-end;
+    cursor: auto;
   }
   #menuBuscador > input {
     display: none;
@@ -201,6 +202,7 @@ nav {
   }
   #userMenu > i {
     cursor: pointer;
+    font-size: 26.6667px;
   }
   nav {
     display: none;
@@ -238,6 +240,15 @@ nav {
   }
   .navCategorias > a:hover {
     text-decoration: underline;
+  }
+  .overlayNav {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #232221;
+    opacity: 0.2;
   }
 }
 #seccionInfo {
