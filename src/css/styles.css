@@ -522,4 +522,18 @@ footer h4 {
   color: #f01446;
 }
 
+@media only screen and (max-width: 875px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footerRedesSociales {
+    gap: 1rem;
+  }
+  .footerSectionBottom {
+    margin: 1rem 10% 1rem 10%;
+    padding-top: 1rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
