@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  min-width: 375px;
+  min-width: 360px;
 }
 
 h1 {
@@ -158,8 +158,48 @@ nav {
   color: #f01446;
 }
 
-.ocultarNav {
+.ocultar {
   display: none;
+}
+
+.buscadorMobile {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  min-width: 360px;
+  height: 56px;
+  z-index: 1;
+  background-color: #f6f1eb;
+  align-items: center;
+  padding: 0rem 1.5rem 0 0.5rem;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+}
+.buscadorMobile > input {
+  width: 80%;
+  height: 35.4px;
+  border: 0;
+  padding: 1rem;
+  border: 1px solid #232221;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.buscadorMobile > input:focus {
+  border: 1px solid #f01446;
+  outline: none;
+}
+.buscadorMobile > button {
+  background-color: white;
+  border: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  padding-right: 0.5rem;
+}
+.buscadorMobile > button > i {
+  font-size: 25px;
+  padding: 0.2rem;
 }
 
 /*------------------MEDIA QUERIES------------------*/
@@ -192,13 +232,13 @@ nav {
     border: 0;
     background-color: #faf8f5;
     padding: 0;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
   }
   #userMenu {
     gap: 0;
     border-left: 2px solid #232221;
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
   }
   #userMenu > i {
     cursor: pointer;
@@ -345,7 +385,7 @@ nav {
     margin-left: 0;
   }
   #infoText > h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
   #seccionInfo > img {
     width: 100%;

@@ -29,7 +29,7 @@ header{
     cursor: pointer;
     border-radius: $radioBorder;
 
-    &>input{    
+    >input{    
         width: 100%;
         padding-left: $paddingItems;
         border-radius: $radioBorder 0 0 $radioBorder; 
@@ -45,7 +45,7 @@ header{
 
     }
 
-    &>button{
+    >button{
         cursor: pointer;
         background-color: $principalVariante;
         padding-right: $paddingItems;
@@ -133,8 +133,57 @@ nav{
     } 
 }
 
-.ocultarNav{
+.ocultar{
     display: none;
+}
+
+.buscadorMobile{
+    $radioBorder: 20px;
+
+    display: flex;
+    position: absolute;
+    width: 100%;
+    min-width: 360px;
+    height: 56px;
+    z-index: 1;
+    background-color: $colorPrincipal;
+    align-items: center;
+    padding: 0rem 1.5rem 0 0.5rem;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    
+
+
+    >input{
+        width: 80%;
+        height: 35.4px;
+        border: 0;
+        padding: 1rem;
+        border: 1px solid $negro;
+        border-top-left-radius: $radioBorder;
+        border-bottom-left-radius: $radioBorder;
+
+        &:focus{
+            border: 1px solid $colorSecundario;
+            outline: none;
+        }
+    }
+
+    >button{
+        background-color: white;
+        border: 0;
+        border: 1px solid black;
+        cursor: pointer;
+        border-radius: 0 $radioBorder $radioBorder 0;
+        padding-right: 0.5rem;
+        
+
+        >i{
+            font-size: 25px;
+            padding: 0.2rem;
+        }
+    }
 }
 
 
@@ -174,7 +223,7 @@ nav{
             border: 0;
             background-color: $principalVariante;
             padding: 0;
-            padding-right: 1rem;
+            padding-right: 0.5rem;
         }
     }
 
@@ -182,7 +231,7 @@ nav{
         gap: 0;
         border-left: 2px solid $negro;
         width: 100%;
-        padding-left: 1rem;
+        padding-left: 0.5rem;
 
         >i{
             cursor: pointer;
