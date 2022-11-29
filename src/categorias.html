@@ -14,6 +14,7 @@
     </div>
     <main>
         <div class="gridCategorias">
+            <i class="fa-solid fa-sliders iconoSliders fa-2x"></i>
             <div class="tituloFiltros">
                 <h2>Filtros</h2>
             </div>
@@ -58,6 +59,7 @@
                         <input class="sliderRange" type="range" value="0" min="0" max="100" onmousemove="numeroSlide(this.value, 'porcentajeMax')"></input>
                     </div>
                 </div>
+                <button class="enviarFiltros">Filtrar</button>
 
             </div>
             <div class="tituloCategorias">
@@ -66,8 +68,13 @@
             <div id="seccionCards" class="categoriasCards">
 
             </div>
-            <div class="seccionPaginas">
-
+            <div class="seccionPaginacion">
+                <a href="#">&laquo;</a>
+                <a href="#" class="paginaSeleccionada">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">&raquo;</a>
             </div>
         </div>
     </main>

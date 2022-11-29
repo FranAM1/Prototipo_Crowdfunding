@@ -2,7 +2,8 @@ import { arrayCards } from './cards.js';
 
 let destacadosCards = document.getElementById("seccionCards")
 
-arrayCards.forEach((e) => {
+for(let i = 0; i < arrayCards.length-1; i++) {
+  let e = arrayCards[i]
   let porcentajeCampaña = parseInt(e.dineroActual * 100 / e.dineroNecesitado) + "%";
 
 
@@ -30,4 +31,4 @@ arrayCards.forEach((e) => {
       </div>
       </div>
     `
-})
+}
