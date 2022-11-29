@@ -64,11 +64,14 @@
     
 }
 
-#destacadosCards{
+.destacadosCards{
+    padding-bottom: 2rem;
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

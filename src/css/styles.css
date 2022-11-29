@@ -56,7 +56,7 @@ header {
   display: none;
 }
 
-#logoHeader {
+.logoHeader {
   justify-self: center;
   width: 300px;
 }
@@ -213,7 +213,7 @@ nav {
     display: block;
     cursor: pointer;
   }
-  #logoHeader {
+  .logoHeader {
     width: 200px;
     margin-left: 1rem;
   }
@@ -351,11 +351,14 @@ nav {
   background-color: #faf8f5;
 }
 
-#destacadosCards {
+.destacadosCards {
+  padding-bottom: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -400,15 +403,6 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-}
-
-#destacadosCards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
 }
 
 .card {
@@ -573,6 +567,130 @@ footer h4 {
   .footerSectionBottom {
     margin: 1rem 10% 1rem 10%;
     padding-top: 1rem;
+  }
+}
+.gridCategorias {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 100px 1fr 100px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+.gridCategorias h2 {
+  text-decoration: underline;
+}
+
+.tituloFiltros {
+  grid-area: 1/1/2/2;
+  width: 100%;
+}
+
+.tituloCategorias {
+  grid-area: 1/2/2/3;
+  width: 100%;
+}
+
+.categoriasCards {
+  grid-area: 2/2/3/3;
+}
+
+.seccionFiltros {
+  grid-area: 2/1/3/2;
+  border-right: 2px solid #232221;
+  height: 100%;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filtros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.sliderRange {
+  width: 100%;
+  height: 15px;
+  background: #232221;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.filtrosIndividualesCategorias {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.filtrosIndividualesCategorias > input {
+  width: 100%;
+}
+
+.styleSelect {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #232221;
+  background-color: #f01446;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.styleSelect > option {
+  color: white;
+}
+.styleSelect > option:hover {
+  background-color: #18a5d6;
+  color: #232221;
+}
+
+.styleFecha {
+  margin-bottom: 1rem;
+  border: 1px solid #232221;
+  background-color: #f01446;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.categoriasCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+.categoriasCards .card:nth-child(odd) {
+  justify-self: end;
+}
+.categoriasCards .card:nth-child(even) {
+  justify-self: start;
+}
+
+@media only screen and (max-width: 875px) {
+  .tituloFiltros {
+    display: none;
+  }
+  .seccionFiltros {
+    display: none;
+  }
+  .tituloCategorias {
+    grid-column: 1/3;
+  }
+  .categoriasCards {
+    grid-column: 1/3;
   }
 }
 

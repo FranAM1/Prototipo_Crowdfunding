@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/150597ad06.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Crowdfunding</title>
+</head>
+<body>
+    <div id="header">
+       <script src="./js/header.js"></script>
+    </div>
+    <main>
+        <div class="gridCategorias">
+            <div class="tituloFiltros">
+                <h2>Filtros</h2>
+            </div>
+            <div class="seccionFiltros">
+
+                <div class="filtros">
+                    <h3>Categoria</h3>
+                    <div class="filtrosIndividualesCategorias">
+                        <select id="selectCategorias" class="styleSelect">
+                            <option>Todos</option>
+                            <option>Arte</option>
+                            <option>Música</option>
+                            <option>Cine</option>
+                            <option>Juegos</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="filtros">
+                    <h3>Precio</h3>
+                    <div class="filtrosIndividualesCategorias">
+                        <p>Min: <span id="precioMin">0</span> €</p> 
+                        <input class="sliderRange" type="range" value="0" min="0" max="100000" onmousemove="numeroSlide(this.value, 'precioMin')"></input>
+                        <p>Max: <span id="precioMax">0</span> €</p> 
+                        <input class="sliderRange" type="range" value="0" min="0" max="100000" onmousemove="numeroSlide(this.value, 'precioMax')"></input>
+                    </div>
+                </div>
+                <div class="filtros">
+                    <h3>Fecha</h3>
+                    <div class="filtrosIndividualesCategorias">
+                        <p>Inicial</p>
+                        <input type="date" class="styleFecha">
+                        <p>Final</p>
+                        <input type="date" class="styleFecha">
+                    </div>
+                </div>
+                <div class="filtros">
+                    <h3>Porcentaje</h3>
+                    <div class="filtrosIndividualesCategorias">
+                        <p>Min: <span id="porcentajeMin">0</span> %</p>
+                        <input class="sliderRange" type="range" value="0" min="0" max="100" onmousemove="numeroSlide(this.value, 'porcentajeMin')"></input>
+                        <p>Max: <span id="porcentajeMax">0</span> %</p> 
+                        <input class="sliderRange" type="range" value="0" min="0" max="100" onmousemove="numeroSlide(this.value, 'porcentajeMax')"></input>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tituloCategorias">
+                <h2>Crowdfundings</h2>
+            </div>
+            <div id="seccionCards" class="categoriasCards">
+
+            </div>
+            <div class="seccionPaginas">
+
+            </div>
+        </div>
+    </main>
+    <button onclick="volverArriba()" id="backToTop"><i class="fa fa-sharp fa-solid fa-arrow-up fa-2x"></i></i></button>
+    <div id="footer">
+        <script src="./js/footer.js"></script>
+    </div>    
+</body>
+<script src="./js/goBackToTop.js"></script>
+<script src="./js/categorias.js"></script>
+<script type="module" src="./js/categoriasCards.js"></script>
+</html>
