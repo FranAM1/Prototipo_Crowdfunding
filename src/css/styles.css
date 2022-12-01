@@ -415,12 +415,14 @@ nav {
 .card .imageContainerCard {
   width: 400px;
   height: 220px;
+  overflow: hidden;
 }
 .card .imageContainerCard > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: linear 0.3s;
 }
 .card > .datosCard {
   background-color: #f6f1eb;
@@ -428,6 +430,9 @@ nav {
 }
 .card:hover {
   box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.2);
+}
+.card:hover .imageContainerCard > img {
+  transform: scale(1.1);
 }
 
 .datosCard {
@@ -717,6 +722,50 @@ footer h4 {
 
 .paginaSeleccionada {
   background-color: #18a5d6;
+}
+
+.overlayFiltros {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #232221;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.seccionFiltrosMobile {
+  display: inline;
+  position: fixed;
+  background-color: #f6f1eb;
+  z-index: 2;
+  top: 2rem;
+  justify-self: center;
+  border: 2px solid #232221;
+  height: 90%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.iconoCerrarFiltros {
+  border: 5px solid #232221;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 25%;
+  background-color: #f6f1eb;
+  color: #232221;
+  align-self: flex-end;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.iconoCerrarFiltros:hover {
+  background-color: #f01446;
+  color: #faf8f5;
 }
 
 @media only screen and (max-width: 875px) {

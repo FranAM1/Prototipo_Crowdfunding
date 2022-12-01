@@ -14,12 +14,13 @@
     </div>
     <main>
         <div class="gridCategorias">
-            <i class="fa-solid fa-sliders iconoSliders fa-2x"></i>
+            <i class="fa-solid fa-sliders iconoSliders fa-2x" onclick="abrirFiltros()"></i>
+            <div id="overlayFiltros" class="ocultar"></div>
             <div class="tituloFiltros">
                 <h2>Filtros</h2>
             </div>
-            <div class="seccionFiltros">
-
+            <div class="seccionFiltros" id="filtrosID">
+                <i class="fa-solid fa-x fa-2x ocultar" id="iconoCerrarFiltros" onclick="ocultarFiltros()"></i>
                 <div class="filtros">
                     <h3>Categoria</h3>
                     <div class="filtrosIndividualesCategorias">
