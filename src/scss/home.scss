@@ -41,22 +41,6 @@
     margin-top: 1rem;
 }
 
-.estiloBoton{
-    font-size: 1rem;
-    font-weight: bolder;
-    padding: 1rem 2rem 1rem 2rem;
-    background-color: $colorSecundario;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-
-    &:hover{
-        background-color: darken($colorSecundario, 10%);
-    }
-}
-
 #seccionDestacados{
     text-align: center;
     padding: 3rem;
@@ -74,7 +58,7 @@
     margin-top: 2rem;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (max-width: 1200px) {
 
     #infoText{

@@ -5,6 +5,8 @@ $secundarioVariante: #18a5d6;
 $negro: #232221;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 *{
     margin: 0;
@@ -32,6 +34,10 @@ h3{
     font-size: 20px;
 }
 
+p{
+    font-family: 'Roboto';
+}
+
 .lowWeight{
     font-weight: 600;
 }
@@ -54,7 +60,7 @@ h3{
     }
   }
 
-  .cookiesContainer{
+.cookiesContainer{
     position: fixed;
     bottom: 0;
     background: $principalVariante;
@@ -67,15 +73,37 @@ h3{
     width: 100%;
     padding: 1rem 5rem 1rem 5rem;
     gap: 1rem;
+
+    >div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 1rem;
+
+        >button:nth-child(2){
+            background-color: $secundarioVariante;
+
+            &:hover{
+                background-color: darken($secundarioVariante, 10%);
+            }
+        }
+    }
 }
 
-.estiloLinks{
-    color: $secundarioVariante;
-    font-size: 1.5rem;
-    transition: color 0.5s;
+.estiloBoton{
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: $colorSecundario;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
 
     &:hover{
-        color: $colorSecundario;
+        background-color: darken($colorSecundario, 10%);
     }
 }
 

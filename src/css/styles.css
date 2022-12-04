@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
@@ -22,6 +23,10 @@ h2 {
 
 h3 {
   font-size: 20px;
+}
+
+p {
+  font-family: "Roboto";
 }
 
 .lowWeight {
@@ -59,14 +64,32 @@ h3 {
   padding: 1rem 5rem 1rem 5rem;
   gap: 1rem;
 }
-
-.estiloLinks {
-  color: #18a5d6;
-  font-size: 1.5rem;
-  transition: color 0.5s;
+.cookiesContainer > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.estiloLinks:hover {
-  color: #f01446;
+.cookiesContainer > div > button:nth-child(2) {
+  background-color: #18a5d6;
+}
+.cookiesContainer > div > button:nth-child(2):hover {
+  background-color: #1382a8;
+}
+
+.estiloBoton {
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #f01446;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.estiloBoton:hover {
+  background-color: #c40d36;
 }
 
 header {
@@ -355,21 +378,6 @@ nav {
   margin-top: 1rem;
 }
 
-.estiloBoton {
-  font-size: 1rem;
-  font-weight: bolder;
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: #f01446;
-  color: white;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background-color 0.5s;
-}
-.estiloBoton:hover {
-  background-color: #c40d36;
-}
-
 #seccionDestacados {
   text-align: center;
   padding: 3rem;
@@ -386,7 +394,6 @@ nav {
   margin-top: 2rem;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   #infoText {
     margin-left: 1rem;
