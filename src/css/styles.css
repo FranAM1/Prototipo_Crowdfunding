@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Montserrat";
   color: #232221;
+  hyphens: auto;
 }
 
 body {
@@ -42,6 +43,30 @@ h3 {
 }
 #backToTop > i {
   color: #f6f1eb;
+}
+
+.cookiesContainer {
+  position: fixed;
+  bottom: 0;
+  background: #faf8f5;
+  z-index: 5;
+  border-top: 1px solid #232221;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 5rem 1rem 5rem;
+  gap: 1rem;
+}
+
+.estiloLinks {
+  color: #18a5d6;
+  font-size: 1.5rem;
+  transition: color 0.5s;
+}
+.estiloLinks:hover {
+  color: #f01446;
 }
 
 header {
@@ -537,7 +562,7 @@ footer h4 {
 }
 
 .footerSectionBottom {
-  margin: 1rem 15% 1rem 15%;
+  margin: 1rem 10% 1rem 10%;
   border-top: 2px solid #18a5d6;
   grid-column: 1/4;
   grid-row: 2/3;
@@ -583,6 +608,7 @@ footer h4 {
   height: 100%;
   align-items: center;
   text-align: center;
+  background-color: #f6f1eb;
 }
 .gridCategorias h2 {
   text-decoration: underline;
@@ -807,6 +833,11 @@ footer h4 {
   .seccionPaginacion {
     grid-area: 4/1/5/2;
     gap: 0.5rem;
+  }
+}
+@media only screen and (max-width: 875px) {
+  .cookiesContainer {
+    padding: 1rem 1rem 1rem 1rem;
   }
 }
 
