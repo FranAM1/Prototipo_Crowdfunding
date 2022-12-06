@@ -256,4 +256,39 @@
         gap: 0.5rem
     }
 
+    .seccionFiltrosMobile{
+        height: 90%;
+    }
+
+    .enviarFiltros {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .iconoCerrarFiltros{
+        border: 4px solid $negro;
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+    .seccionFiltrosMobile{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+    }
+
+    .enviarFiltros {
+        padding: 0.5rem;
+        background-color: $secundarioVariante;
+        border: 2px solid $negro;
+        border-radius: 5px;
+        width: 50%;
+        font-size: 1.2rem;
+        color: $negro;
+        font-weight: bolder;
+        cursor: pointer;
+    }
 }
