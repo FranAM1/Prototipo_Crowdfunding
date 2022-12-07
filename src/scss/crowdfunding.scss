@@ -1,0 +1,110 @@
+.gridCrowdfunding {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    >h1 {
+        grid-area: 1 / 1 / 2 / 4;
+        text-decoration: underline;
+    }
+
+    >button {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+}
+
+.imagenFundingIndividual {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid $negro;
+    border-radius: 0.5rem;
+
+    >img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.infoFundingIndividual {
+    grid-area: 2 / 3 / 3 / 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    span{
+        font-weight: lighter;
+    }
+}
+
+.infoExtraFundingIndividual {
+    grid-area: 3 / 1 / 4 / 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    height: 100%;
+    padding: 1rem 0 0 0;
+    gap: 3rem;
+
+    >i {
+        color: $negro;
+
+        >span {
+            color: $colorSecundario;
+        }
+    }
+}
+
+.barraDeProgesionInidividual {
+    border: 2px solid $negro;
+    background-color: $principalVariante;
+    width: 90%;
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+
+    >div {
+        background-color: $secundarioVariante;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 10%;
+        max-width: 100%;
+        font-weight: bold;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
+
+.estiloBotonContribuir {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: $colorSecundario;
+    color: $colorPrincipal;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    justify-self: start;
+    align-self: flex-start;
+
+    &:hover {
+        background-color: darken($colorSecundario, 10%);
+    }
+}

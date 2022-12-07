@@ -2,13 +2,13 @@ import { arrayCards } from './cards.js';
 
 let destacadosCards = document.getElementById("seccionCards")
 
-arrayCards.forEach((e) => {
+arrayCards.forEach((e, index) => {
   let porcentajeCampaña = parseInt(e.dineroActual * 100 / e.dineroNecesitado) + "%";
 
 
   destacadosCards.innerHTML +=
     `
-    <div class="card">
+    <div class="card" onclick="mostrarIndividual(${index})">
       <div class="imageContainerCard">
         <img src="${e.imagen}">
       </div>

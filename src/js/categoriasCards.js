@@ -9,7 +9,7 @@ for(let i = 0; i < arrayCards.length-1; i++) {
 
   destacadosCards.innerHTML +=
     `
-    <div class="card">
+    <div class="card" onclick="mostrarIndividual(${i})">
       <div class="imageContainerCard">
         <img src="${e.imagen}">
       </div>

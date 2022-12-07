@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/150597ad06.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Crowdfunding</title>
+</head>
+<body>
+    <div id="header">
+       <script src="./js/header.js"></script>
+    </div>
+    <main>
+        <div class="gridCrowdfunding">
+            <h1 id="tituloCrowdfundingIndividual"></h1>
+            <div class="imagenFundingIndividual">
+                <img id="imagenFundingIndividual" src="" alt="">
+            </div>
+            <div class="infoExtraFundingIndividual">
+                <i class="fa-solid fa-location-dot fa-2x"><span id="paisIndividual"> X</span></i>
+                <i class="fa-solid fa-tag fa-2x"><span id="categoriaIndividual"> X</span></i>
+            </div>
+            <div class="infoFundingIndividual">
+                <i class="fa-solid fa-users fa-3x"><span id="contribuidoresIndividual"> X</span></i>
+                <i class="fa-solid fa-clock fa-3x"><span id="tiempoIndividual"> X</span></i>
+                <i class="fa-solid fa-sack-dollar fa-3x"><span id="dineroIndividual"> X€ de X€</span></i>
+                <div class="barraDeProgesionInidividual"><div id="porcentajeIndividual">X%</div></div>
+            </div>
+            <button class="estiloBotonContribuir">Contribuir</button>
+        </div>
+    </main>
+    <button onclick="volverArriba()" id="backToTop"><i class="fa fa-sharp fa-solid fa-arrow-up fa-2x"></i></i></button>
+    <div id="cookiesContainer" class="ocultar"></div>
+    <div id="footer">
+        <script src="./js/footer.js"></script>
+    </div> 
+</body>
+<script src="./js/goBackToTop.js"></script>
+<script src="./js/cookies.js"></script>
+<script type="module" src="./js/crowdfunding.js"></script>
+</html>
