@@ -186,7 +186,6 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 2rem;
-    overflow-y: scroll;
 }
 
 .iconoCerrarFiltros{
@@ -258,7 +257,10 @@
     }
 
     .seccionFiltrosMobile{
-        height: 90%;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        top: 0;
     }
 
     .enviarFiltros {
@@ -274,12 +276,6 @@
 }
 
 @media only screen and (max-width: 440px) {
-    .seccionFiltrosMobile{
-        height: 100%;
-        width: 100%;
-        border-radius: 0;
-        top: 0;
-    }
 
     .enviarFiltros {
         padding: 0.5rem;
