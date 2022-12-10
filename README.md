@@ -10,6 +10,9 @@ Desenvolupa un prototipus amb HTML5, CSS3 i SCSS de la idea de projecte que has 
   - [Webgrafia](#webgrafia)
 - [CSS Transitions](#css-transitions)
 - [Detalles del proyecto](#detalles-del-proyecto)
+  - [Componentes](#componentes)
+  - [Generador de cards](#generador-de-cards)
+  - [Actualización individual](#actualización-individual)
 - [Github project](#github-project)
 - [Video explicativo](#video-explicativo)
 
@@ -102,7 +105,7 @@ arrayCards.forEach((e, index) => {
 ```
 ## Actualización individual
 La sección individual de cada crowdfunding es un solo archivo html que va cambiando con js en funcion de una variable guardada en el session storage. <br>
-Al hacer click se ejectua el siguiente código encargado de la redirección y obtener que proyecto se quiere visualizar
+Al hacer click en una card se ejectua el siguiente código encargado de guardar que proyecto se quiere visualizar y la redirección a la página.
 ```
 async function mostrarIndividual(posicionArray){
     await sessionStorage.setItem("posicion", posicionArray)
@@ -110,40 +113,7 @@ async function mostrarIndividual(posicionArray){
     window.location.href = "/crowdfunding.html"
 }
 ```
-Después se ejectua el código encargado de añadir a cada sección su información correspondiente mediante el siguiente código.
-```
-import { arrayCards } from './cards.js';
-let posicionCartaIndividual = sessionStorage.getItem("posicion")
-
-let cartaEjemplo = arrayCards[posicionCartaIndividual];
-
-let tituloCrowdfundingIndividual = document.getElementById("tituloCrowdfundingIndividual")
-let imagenIndividual = document.getElementById("imagenFundingIndividual")
-let categoriaIndividual = document.getElementById("categoriaIndividual")
-let paisIndividual = document.getElementById("paisIndividual")
-let contribuidoresIndividual = document.getElementById("contribuidoresIndividual")
-let dineroIndividual = document.getElementById("dineroIndividual")
-let porcentajeIndividual = document.getElementById("porcentajeIndividual")
-let tiempoIndividual = document.getElementById("tiempoIndividual")
-
-tituloCrowdfundingIndividual.innerHTML = " "+cartaEjemplo.titulo
-
-imagenIndividual.src = " "+cartaEjemplo.imagen
-
-categoriaIndividual.innerHTML = " "+cartaEjemplo.categoria
-
-paisIndividual.innerHTML = " "+cartaEjemplo.pais
-
-tiempoIndividual.innerHTML = " "+cartaEjemplo.tiempoRestante
-
-contribuidoresIndividual.innerHTML = " "+cartaEjemplo.contribuidores.toLocaleString()
-
-dineroIndividual.innerHTML = " "+cartaEjemplo.dineroActual.toLocaleString()+"€ de "+cartaEjemplo.dineroNecesitado.toLocaleString()+"€"
-
-let calculoPorcentajeIndividual = parseInt(cartaEjemplo.dineroActual * 100 / cartaEjemplo.dineroNecesitado)
-porcentajeIndividual.innerHTML = " "+ calculoPorcentajeIndividual + "%";
-porcentajeIndividual.style.width = calculoPorcentajeIndividual+"%"
-```
+Después se ejectua el código encargado de añadir a cada sección su información correspondiente mediante el código dentro del archivo ```crowdfunding.js```
 
 ### Webgrafia
 [Kickstarter](https://www.kickstarter.com/?lang=es) <br>
