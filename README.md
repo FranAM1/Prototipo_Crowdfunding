@@ -29,6 +29,12 @@ Desenvolupa un prototipus amb HTML5, CSS3 i SCSS de la idea de projecte que has 
 ### Fuentes
 ![image](https://user-images.githubusercontent.com/91600940/205703293-13a8886c-6574-491c-a393-052df0ec068a.png)
 
+### Webgrafia
+[Kickstarter](https://www.kickstarter.com/?lang=es) <br>
+[PcComponenetes](https://www.pccomponentes.com/) <br>
+[Ulule](https://es.ulule.com/) <br>
+[Fontawesome](https://fontawesome.com/) (iconos)
+
 # CSS Transitions
 Lo he utilizado para los hovers en distintos elementos de la página.
 
@@ -114,12 +120,6 @@ async function mostrarIndividual(posicionArray){
 }
 ```
 Después se ejectua el código encargado de añadir a cada sección su información correspondiente mediante el código dentro del archivo ```crowdfunding.js```
-
-### Webgrafia
-[Kickstarter](https://www.kickstarter.com/?lang=es) <br>
-[PcComponenetes](https://www.pccomponentes.com/) <br>
-[Ulule](https://es.ulule.com/) <br>
-[Fontawesome](https://fontawesome.com/) (iconos)
 
 # Github project
 
