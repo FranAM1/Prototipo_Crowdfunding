@@ -9,6 +9,7 @@ Desenvolupa un prototipus amb HTML5, CSS3 i SCSS de la idea de projecte que has 
   - [Fuentes](#fuentes)
   - [Webgrafia](#webgrafia)
 - [CSS Transitions](#css-transitions)
+- [Detalles del proyecto](#detalles-del-proyecto)
 - [Github project](#github-project)
 - [Video explicativo](#video-explicativo)
 
@@ -30,6 +31,119 @@ Lo he utilizado para los hovers en distintos elementos de la página.
 
 ![Animation](https://user-images.githubusercontent.com/91600940/206865694-5a24eacd-13dc-400d-a50d-d670d90aa35d.gif)
 
+# Detalles del proyecto
+
+## Componentes
+He creado una carpeta de componentes que contiene diferentes secciones que se repiten en las paginas de tal forma que las añado por js mediante un fetch. <br>
+![image](https://user-images.githubusercontent.com/91600940/206869394-28599937-c698-474d-ae9d-ad7c764e951a.png)
+
+**Ejemplo con el header:**
+```
+const header = document.getElementById("header");
+
+fetch("./components/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    header.innerHTML += data;
+  });
+```
+
+## Generador de cards
+He guardado todas las cards dentro del archivo ```cards.js``` en formato objeto para luego acceder mediante código a cada una e imprimir los datos que necesite. <br>
+**Ejemplo de estructura de una card**
+```
+{
+    titulo: "Mercedes Lackey's World of Valdemar",
+    descripcion: "Go beyond the books with new official maps, timelines, apparel and more from the world of Valdemar!",
+    dineroActual: 18120,
+    dineroNecesitado: 49296,
+    tiempoRestante: "5 dias",
+    imagen: "https://cdn.discordapp.com/attachments/1043959075194544169/1043959251791527946/e01fd61b10e41dd5bc706e8e01032e95_original.jpg",
+    pais: "Noruega",
+    categoria: "Arte",
+    contribuidores: 23021
+  }
+```
+**Ejemplo de creación automática de cards**
+```
+import { arrayCards } from './cards.js';
+
+let destacadosCards = document.getElementById("seccionCards")
+
+arrayCards.forEach((e, index) => {
+  let porcentajeCampaña = parseInt(e.dineroActual * 100 / e.dineroNecesitado) + "%";
+
+
+  destacadosCards.innerHTML +=
+    `
+    <div class="card" onclick="mostrarIndividual(${index})">
+      <div class="imageContainerCard">
+        <img src="${e.imagen}">
+      </div>
+      <div class="datosCard">
+        <h3>${e.titulo}</h3>
+        <p>${e.descripcion}</p>
+        <div class="infoExtraCard">
+          <div class="moneyInfo">
+            <i class="fa fa-solid fa-sack-dollar fa-2x"></i><span>${e.dineroActual.toLocaleString()}€</span>
+          </div>
+          <div class="favoritosInfo">  
+            <i class="fa-sharp fa-solid fa-heart fa-2x"></i>
+          </div>
+          <div class="barraDeProgesion"><div style='width:${porcentajeCampaña}'>${porcentajeCampaña}</div></div>
+          <div class="timeInfo">
+            <i class="fa-solid fa-clock fa-2x"></i><span>Acaba en ${e.tiempoRestante}</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    `
+})
+```
+## Actualización individual
+La sección individual de cada crowdfunding es un solo archivo html que va cambiando con js en funcion de una variable guardada en el session storage. <br>
+Al hacer click se ejectua el siguiente código encargado de la redirección y obtener que proyecto se quiere visualizar
+```
+async function mostrarIndividual(posicionArray){
+    await sessionStorage.setItem("posicion", posicionArray)
+
+    window.location.href = "/crowdfunding.html"
+}
+```
+Después se ejectua el código encargado de añadir a cada sección su información correspondiente mediante el siguiente código.
+```
+import { arrayCards } from './cards.js';
+let posicionCartaIndividual = sessionStorage.getItem("posicion")
+
+let cartaEjemplo = arrayCards[posicionCartaIndividual];
+
+let tituloCrowdfundingIndividual = document.getElementById("tituloCrowdfundingIndividual")
+let imagenIndividual = document.getElementById("imagenFundingIndividual")
+let categoriaIndividual = document.getElementById("categoriaIndividual")
+let paisIndividual = document.getElementById("paisIndividual")
+let contribuidoresIndividual = document.getElementById("contribuidoresIndividual")
+let dineroIndividual = document.getElementById("dineroIndividual")
+let porcentajeIndividual = document.getElementById("porcentajeIndividual")
+let tiempoIndividual = document.getElementById("tiempoIndividual")
+
+tituloCrowdfundingIndividual.innerHTML = " "+cartaEjemplo.titulo
+
+imagenIndividual.src = " "+cartaEjemplo.imagen
+
+categoriaIndividual.innerHTML = " "+cartaEjemplo.categoria
+
+paisIndividual.innerHTML = " "+cartaEjemplo.pais
+
+tiempoIndividual.innerHTML = " "+cartaEjemplo.tiempoRestante
+
+contribuidoresIndividual.innerHTML = " "+cartaEjemplo.contribuidores.toLocaleString()
+
+dineroIndividual.innerHTML = " "+cartaEjemplo.dineroActual.toLocaleString()+"€ de "+cartaEjemplo.dineroNecesitado.toLocaleString()+"€"
+
+let calculoPorcentajeIndividual = parseInt(cartaEjemplo.dineroActual * 100 / cartaEjemplo.dineroNecesitado)
+porcentajeIndividual.innerHTML = " "+ calculoPorcentajeIndividual + "%";
+porcentajeIndividual.style.width = calculoPorcentajeIndividual+"%"
+```
 
 ### Webgrafia
 [Kickstarter](https://www.kickstarter.com/?lang=es) <br>
@@ -42,5 +156,5 @@ Lo he utilizado para los hovers en distintos elementos de la página.
 [Link al github project](https://github.com/users/FranAM1/projects/2)
 
 # Video explicativo
-[Link del video en drive]() (Si no usas la cuenta del instituto no dejará entrar)
+[Link del video en drive](https://drive.google.com/file/d/1DKlxEKpwVXcfPuuTAfy9YA4472GXTIEC/view?usp=sharing) (Si no usas la cuenta del instituto no dejará entrar)
 
